@@ -1,60 +1,61 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte | Futuro Sustentável</title>
+    <title>Agricultura Moderna | O Guia Completo</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">Agro<span>Forte</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#tecnologia">Tecnologia</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+    <nav class="navbar">
+        <div class="logo">AgroTech</div>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#galeria">Culturas</a></li>
+            <li><a href="#interativo">Simulador</a></li>
+        </ul>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <div class="hero-text">
+            <h1>O Futuro da Agricultura</h1>
+            <p>Desde a Revolução Neolítica à Inteligência Artificial no campo.</p>
+        </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Equilíbrio entre Produção e Meio Ambiente</h1>
-            <p>Inovação tecnológica a serviço da terra para alimentar o mundo com consciência.</p>
-            <a href="#sobre" class="btn">Saiba Mais</a>
+    <section id="historia" class="content-section">
+        <h2>A Jornada do Cultivo</h2>
+        <div class="text-container">
+            <p>A agricultura começou há cerca de 10.000 anos, marcando o fim do nomadismo. No Crescente Fértil, os seres humanos aprenderam a domesticar cereais como o trigo e a cevada. Este foi o maior salto tecnológico da humanidade, permitindo a criação de cidades e civilizações.</p>
+            <p>Hoje, enfrentamos o desafio de alimentar 8 mil milhões de pessoas. A agricultura de precisão utiliza drones e sensores de humidade para otimizar cada gota de água e cada grama de fertilizante, garantindo a sustentabilidade do planeta.</p>
         </div>
     </section>
 
-    <section id="sobre" class="content-section">
-        <h2>Nosso Propósito</h2>
-        <div class="cards-container">
-            <div class="card">
-                <i class="fas fa-leaf"></i>
-                <h3>Sustentabilidade</h3>
-                <p>Práticas que preservam o solo e os recursos hídricos para as próximas gerações.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Produtividade</h3>
-                <p>Otimização de colheitas através de análise de dados e manejo inteligente.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-seedling"></i>
-                <h3>Futuro</h3>
-                <p>O agronegócio como protagonista na regeneração do ecossistema global.</p>
-            </div>
+    <section id="galeria" class="gallery-section">
+        <h2>Culturas e Tecnologias</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=500" alt="Plantação"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=500" alt="Trator"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=500" alt="Estufa"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=500" alt="Drones no campo"></div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Agro Forte - Inovação Sustentável no Campo.</p>
+    <section id="interativo" class="interactive-section">
+        <h2>Simulador de Produtividade</h2>
+        <p>Calcula uma estimativa de colheita baseada no tamanho da tua área:</p>
+        <div class="calc-box">
+            <input type="number" id="hectares" placeholder="Área em Hectares">
+            <button onclick="calcularProducao()">Calcular Estimativa</button>
+            <p id="resultado"></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Projeto Agricultura - Criado para o GitHub Pages</p>
     </footer>
 
     <script src="script.js"></script>
