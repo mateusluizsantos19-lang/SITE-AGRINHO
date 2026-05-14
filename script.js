@@ -1,28 +1,28 @@
-// Seleção de elementos
-const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
 
-// Função para abrir/fechar o menu mobile
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    
-    // Troca o ícone de hambúrguer para fechar (X)
-    const icon = menuToggle.querySelector('i');
-    if (navLinks.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
+// Função para o Simulador de Produção
+function calcularProducao() {
+    const hectares = document.getElementById('hectares').value;
+    const resultado = document.getElementById('resultado');
+
+    if (hectares > 0) {
+        // Média fictícia: 3000kg por hectare
+        const producaoTotal = hectares * 3000;
+        resultado.innerHTML = `Estimativa de Produção: ${producaoTotal.toLocaleString()} kg de grãos!`;
+        resultado.style.color = "#2d5a27";
     } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
+        resultado.innerHTML = "Por favor, insira um valor válido.";
+        resultado.style.color = "red";
     }
-});
+}
 
-// Fechar o menu ao clicar em um link (melhora a experiência do usuário)
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        const icon = menuToggle.querySelector('i');
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
+// Efeito de Revelação ao Descer a Página
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < window.innerHeight - 100) {
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
+        }
     });
 });
